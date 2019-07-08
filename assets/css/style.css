@@ -4,17 +4,17 @@ body {
     background-size: cover;
     height: auto;
     background-repeat: no-repeat;
-
 }
-
+.crystal-image {
+    height: 125px;
+}
 h1 {
     color:white;
 }
 p {
     color: white;
-
 }
 .col-lg-3{
-opacity: .5;
+opacity: .4;
 
 }
