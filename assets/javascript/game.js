@@ -1,6 +1,6 @@
 //variables
 var wins = 0;
-var loses = 0;
+var losses = 0;
 var counter = 0;
 var targetNumber;
 
@@ -46,7 +46,7 @@ function reset() {
     resetCrystals();
     crystalClick();
     randomNumber();
-    console.log(randomNumner);
+    console.log(randomNumber);
 } 
 
 $("#totalScore").text(counter);
@@ -60,7 +60,7 @@ $(".crystal-image").on("click", function() {
     $("#totalScore").text(counter);
     console.log(crystalValue);
 
-    if (counter === targetNumber) {
+    if (counter == targetNumber) {
         ++wins;
         $("#totalWins").html(wins)
         alert("You Did It!!!");
@@ -68,7 +68,7 @@ $(".crystal-image").on("click", function() {
 
     }else if (counter >= targetNumber) {
         ++losses;
-        $("#totallosses").html(losses)
+        $("#totalLosses").html(losses)
         alert("Better Luck Next Time");
         console.log("Better Luck Next Time");
         reset();
