@@ -1,25 +1,25 @@
-//variables
+//variables that will store your wins, losses, etc
 var wins = 0;
 var losses = 0;
 var counter = 0;
 var targetNumber;
 
 
-//crystal image arrays
+//these the location of your images.  Put them in an array so they can be given their random value
 var images = ["assets/images/crystalblue.jpg",
 "assets/images/crystalpurple.jpg", 
 "assets/images/crystalgreen.jpg", 
 "assets/images/crystalred.jpg"]
 
 
-//create random numbers and show them 
+//this function creates your random number and puts it in the number to guess box
 function randomNumber() {
     targetNumber = (Math.floor(Math.random() * 100) + 19);
        $("#number-to-guess").text(targetNumber)
        console.log(targetNumber);
    }
 
-//radom number options 
+//this function generates the random number that gets assinged to your crystal images
 
 function resetCrystals() {
     for (var i = 0; i < images.length; i++) {
