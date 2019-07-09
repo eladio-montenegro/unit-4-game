@@ -5,13 +5,15 @@ body {
     background-repeat: no-repeat;
 }
 .crystal-image {
-    height: 125px;
+    height: auto;
+    width: 23%;
 }
 h1 {
     color:white;
 }
-p {
+ul {
     color: white;
+    border-bottom: solid;
 }
 .col-lg-4{
 opacity: .7;

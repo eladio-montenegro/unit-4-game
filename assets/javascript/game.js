@@ -16,7 +16,6 @@ var images = ["assets/images/crystalblue.jpg",
 function randomNumber() {
     targetNumber = (Math.floor(Math.random() * 100) + 19);
        $("#number-to-guess").text(targetNumber)
-       console.log(targetNumber);
    }
 
 //this function generates the random number that gets assinged to your crystal images
@@ -46,7 +45,6 @@ function reset() {
     resetCrystals();
     crystalClick();
     randomNumber();
-    console.log(randomNumber);
 } 
 
 $("#totalScore").text(counter);
@@ -58,19 +56,17 @@ $(".crystal-image").on("click", function() {
     crystalValue = parseInt(crystalValue);
     counter += crystalValue;
     $("#totalScore").text(counter);
-    console.log(crystalValue);
 
     if (counter == targetNumber) {
         ++wins;
         $("#totalWins").html(wins)
-        alert("You Did It!!!");
+        alert("You Win!!!  Way to Go");
         reset ();
 
     }else if (counter >= targetNumber) {
         ++losses;
         $("#totalLosses").html(losses)
-        alert("Better Luck Next Time");
-        console.log("Better Luck Next Time");
+        alert("You lose.  Better Luck Next Time");
         reset();
     }
   })
